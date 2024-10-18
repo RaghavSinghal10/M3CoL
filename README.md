@@ -2,7 +2,7 @@
 Code for the paper [M3CoL: Harnessing Shared Relations via Multimodal Mixup Contrastive Learning for Multimodal Classification](https://arxiv.org/abs/2409.17777).
 
 ## Introduction
-Deep multimodal learning has shown remarkable success by leveraging contrastive learning to capture explicit one-to-one relations across modalities. However, real world data often exhibits shared relations beyond simple pairwise associations. We propose M3CoL, a Multimodal Mixup Contrastive Learning approach to capture nuanced *shared* relations inherent in multimodal data. Our key contribution is a Mixup-based contrastive loss that learns robust representations by aligning mixed samples from one modality with their corresponding samples from other modalities thereby capturing shared relations between them. For multimodal classification tasks, we introduce a framework that integrates a fusion module with unimodal prediction modules for auxiliary supervision during training, complemented by our proposed Mixup-based contrastive loss. Through extensive experiments on diverse datasets (N24News, ROSMAP, BRCA, and Food-101), we demonstrate that M3CoL effectively captures shared multimodal relations and generalizes across domains. It outperforms state-of-the-art methods on N24News, ROSMAP, and BRCA, while achieving comparable performance on Food-101. Our work highlights the significance of learning shared relations for robust multimodal learning, opening up promising avenues for future research.
+Deep multimodal learning has shown remarkable success by leveraging contrastive learning to capture explicit one-to-one relations across modalities. However, real world data often exhibits shared relations beyond simple pairwise associations. We propose M3CoL, a Multimodal Mixup Contrastive Learning approach to capture nuanced *shared* relations inherent in multimodal data. Our key contribution is a Mixup-based contrastive loss that learns robust representations by aligning mixed samples from one modality with their corresponding samples from other modalities thereby capturing shared relations between them. For multimodal classification tasks, we introduce a framework that integrates a fusion module with unimodal prediction modules for auxiliary supervision during training, complemented by our proposed Mixup-based contrastive loss. Through extensive experiments on diverse datasets (N24News, ROSMAP, BRCA, and Food-101), we demonstrate that M3CoL effectively captures shared multimodal relations and generalizes across domains. It outperforms state-of-the-art methods on N24News, ROSMAP, and BRCA, while achieving comparable performance on Food-101.
 
 ![M3CoL Arch Image](m3col-arch.png)
 
@@ -47,4 +47,20 @@ train_medical --dataset=rosmap --data_dir=/your/data/directory/path
 BRCA:
 ```
 train_medical --dataset=brca --data_dir=/your/data/directory/path
+```
+
+## Citation
+
+If you use our work for your research, please cite our paper:
+
+```
+@misc{kumar2024harnessingsharedrelationsmultimodal,
+      title={Harnessing Shared Relations via Multimodal Mixup Contrastive Learning for Multimodal Classification}, 
+      author={Raja Kumar and Raghav Singhal and Pranamya Kulkarni and Deval Mehta and Kshitij Jadhav},
+      year={2024},
+      eprint={2409.17777},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2409.17777}, 
+}
 ```
